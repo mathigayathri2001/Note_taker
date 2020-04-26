@@ -42,6 +42,22 @@ app.get('/notes', function (req, res) {
     res.json(newNote)
   })
 
+  app.delete('/api/notes/:id', function (req, res) {
+   let noteId = parseInt(req.params.id);
+    for (let i = 0; i < notes.length; i++) {
+        if (noteId === notes[i].id) {
+            notes.splice(i, 1);
+           
+            fs.writeFile(outputPath, JSON.stringify(notes), function (err) {
+                if (err) {
+                    throw err
+                } 
+            })
+        }
+    }
+    res.json(notes)
+})
+
 
 
 
