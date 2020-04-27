@@ -13,7 +13,7 @@
  --- 
 
   # Image 
-  # ![Intial Page](image/img.jpg)
+  # ![First page](image/img.jpg)
   This is notes page in this we can write note title and note txt to save the text by clicking save button on the top right.
   # ![second Page](image/img1.jpg)
   After saved the text it will save and displayed in left side .
